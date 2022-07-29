@@ -1,0 +1,14 @@
+.nav__container {
+    width: 100vw;
+    height: 50px;
+    background-color: lighten($color: black, $amount: 30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__user {
+    font-size: 30px;
+    margin-left: 20px;
+    color: white;
+}

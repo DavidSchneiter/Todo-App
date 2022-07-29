@@ -1,0 +1,46 @@
+  input[type="checkbox"] {
+    margin: .8rem;
+    position: relative;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid hsl(233, 14%, 35%);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input:checked {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45daff+0,bd61eb+100 */
+    background: rgb(69,218,255); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(69,218,255,1) 0%, rgba(189,97,235,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(69,218,255,1) 0%,rgba(189,97,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(69,218,255,1) 0%,rgba(189,97,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45daff', endColorstr='#bd61eb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
