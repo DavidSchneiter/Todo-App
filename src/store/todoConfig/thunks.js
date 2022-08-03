@@ -55,12 +55,10 @@ export const startSaveToDo = () => {
     dispatch(addNewEmptyToDo(newToDo));
 
     dispatch(updateToDo(newToDo));
-    setTimeout(() => {
-      const clearToDo = {
-        body: "",
-      };
-      dispatch(setClearToDo(clearToDo));
-    }, 1000);
+    const clearToDo = {
+      body: "",
+    };
+    dispatch(setClearToDo(clearToDo));
   };
 };
 
