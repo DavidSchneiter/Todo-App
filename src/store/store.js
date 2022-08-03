@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { authSlice } from './auth/authSlice';
-import { journalSlice } from './journal/journalSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import { authSlice } from "./auth/authSlice";
+import { toDoSlice } from "./todoConfig/toDoSlice";
 
 export const store = configureStore({
   reducer: {
     auth: authSlice.reducer,
-    journal: journalSlice.reducer,
+    todo: toDoSlice.reducer,
   },
 });

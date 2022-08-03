@@ -14,7 +14,7 @@ export const Navbar = () => {
     <div className="nav__container">
       <h3 className="nav__user">{displayName}</h3>
 
-      <button className="btn" onClick={onLogout}>
+      <button className="btn nav__logout" onClick={onLogout}>
         <i className="fa-solid fa-power-off"></i>
         Logout
       </button>

@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navbar } from "./Navbar";
 import { ToDo } from "./ToDo";
 import { Input } from "./Input";
-import { startDeletingCompleted } from "../../store/journal/thunks";
+import { startDeletingCompleted } from "../../store/todoConfig/thunks";
 export const TodoScreen = () => {
   const dispatch = useDispatch();
 
-  const { notes } = useSelector((state) => state.journal);
+  const { ToDos } = useSelector((state) => state.todo);
 
   const [buttonClicked, setButtonClicked] = useState("all");
 
@@ -27,8 +27,8 @@ export const TodoScreen = () => {
     dispatch(startDeletingCompleted());
   };
 
-  const complete = notes.filter((note) => note.complete);
-  const active = notes.filter((note) => !note.complete);
+  const complete = ToDos.filter((note) => note.complete);
+  const active = ToDos.filter((note) => !note.complete);
 
   return (
     <div className="todo__main">
@@ -52,7 +52,7 @@ export const TodoScreen = () => {
               buttonClicked === "complete"
                 ? complete.map((note) => <ToDo key={note.id} {...note} />)
                 : buttonClicked === "all"
-                ? notes.map((note) => <ToDo key={note.id} {...note} />)
+                ? ToDos.map((note) => <ToDo key={note.id} {...note} />)
                 : active.map((note) => <ToDo key={note.id} {...note} />)
               // notes.map( note => (
               // 	<ToDo key={ note.id } { ...note } />
@@ -60,11 +60,11 @@ export const TodoScreen = () => {
             }
           </ul>
 
-          <div className="input__block flex">
+          <div className="task__block flex">
             <div>
               <p> {active.length} items left</p>
             </div>
-            <div>
+            <div className="buttons__block">
               <button className="btn" onClick={handleAll}>
                 All
               </button>
