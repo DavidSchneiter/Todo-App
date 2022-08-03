@@ -70,9 +70,8 @@
         height: 20px;
     }
     .btn-text {
-        margin: 11px 40px 0 0;
+        margin: 11px 10px 0 0;
         color: black;
-        font-size: 14px;
         letter-spacing: 0.2px;
     }
     &:hover {
@@ -82,4 +81,13 @@
         color: red;
         background: lighten($color: black, $amount: 58);
     }
+}
+
+@media (max-width: 576px) {
+    .btn-text {
+        b {
+            font-size: 15px;
+        }
+    }
+    
 }

@@ -92,3 +92,21 @@
       transform: rotate(360deg);
     }
 } 
+
+@media (max-width: 576px) {
+    .auth__social-networks {
+            // align-items: center;
+            // margin: 20px 0;
+            // display: flex;
+            // justify-content: center;
+            // flex-direction: column;
+            // padding-top: 20px;
+            // padding-bottom: 20px;
+            // width: 100%;
+    
+            p {
+                margin-bottom: 10px;
+                font-size: 15px;
+            }
+        }
+}
